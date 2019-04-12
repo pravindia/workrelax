@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workrelax/onboardingScreen.dart';
 
 class SplashScreen extends StatelessWidget {
   final Widget child;
@@ -32,7 +33,12 @@ class SplashScreen extends StatelessWidget {
                 shape: new RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(30.0)),
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                onPressed: () {},
+                onPressed: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => OnboardingScreen()))
+                    },
                 child: Text(
                   'Get Started',
                   style: TextStyle(
